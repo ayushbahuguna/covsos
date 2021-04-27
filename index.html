@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Semantic UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div class="ui container main_container">
+      <div class="ui card main_card">
+        <div class="content">
+          <div class="center aligned header">Hello</div>
+<!--select city-->
+          <div class="ui form">
+            <div class="field">
+              <label>Select City</label>
+              <select name="city" id="cities" class="ui search dropdown">
+                <option value=""> Select City</option>
+                <option value="Delhi"> Delhi</option>
+                <option value="Mumbai"> Mumbai</option>
+                <option value="Bangalore"> Bangalore</option>
+                <option value="Luckhnow"> Luckhnow</option>
+                <option value="Dehradun"> Dehradun</option>
+              </select>
+            </div>
+          </div>
+<!--Select keyword or Tags-->
+          <div class="ui form">
+            <label> Select Tags/Keywords</label>
+            <div class="ui four column grid">
+              <div class="column">
+                <div class="inline field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="tags" value="Beds" >
+                    <label>Beds</label>
+                  </div>
+              </div>
+              <div class="inline field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="tags" value="ICU" >
+                  <label>ICU</label>
+                </div>
+            </div>
+
+            <div class="inline field">
+              <div class="ui checkbox">
+                <input type="checkbox" name="tags" value="Oxygen" >
+                <label>Oxygen</label>
+              </div>
+          </div>
+
+          <div class="inline field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="tags" value="Available" >
+              <label>Available</label>
+            </div>
+        </div>
+            
+            </div>
+            <div class="column">
+              <div class="inline field">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="tags" value="Ventilator" >
+                  <label>Ventilator</label>
+                </div>
+            </div>
+            <div class="inline field">
+              <div class="ui checkbox">
+                <input type="checkbox" name="tags" value="Tests" >
+                <label>Tests</label>
+              </div>
+          </div>
+          <div class="inline field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="tags" value="Fabiflu" >
+              <label>Fabiflu</label>
+            </div>
+        </div>
+          
+          </div>
+          <div class="column">
+            <div class="inline field">
+              <div class="ui checkbox">
+                <input type="checkbox" name="tags" value="Remdesivir" >
+                <label>Remdesivir</label>
+              </div>
+          </div>
+          <div class="inline field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="tags" value="Favioiravir" >
+              <label>Favioiravir</label>
+            </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="tags" value="Tocilizumab" >
+            <label>Tocilizumab</label>
+          </div>
+      </div>
+        </div>
+        <div class="column">
+          <div class="inline field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="tags" value="Plasma" >
+              <label>Plasma</label>
+            </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="tags" value="Food" >
+            <label>Food</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="tags" value="Urgent" >
+            <label>Urgent</label>
+          </div>
+        </div>
+            
+          </div>
+        </div>
+          
+      </div>
+      
+    </div>
+    <div class="ui bottom attached button" onclick="generateLink()">
+      <i class="add icon"></i>
+      Generate Link
+    </div>
+    </div>
+    </div>
+
+   
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="./main.js"></script>
+    
+  </body>
+</html>
