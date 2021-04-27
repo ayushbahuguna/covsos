@@ -17,8 +17,7 @@ function getCheckedTags(){
 function generateLink(){
   const base = "https://twitter.com/search"
   const params = new URLSearchParams();
-  const checkedTagsArray = getCheckedTags().toString().split(",").join(" ");
-  const query = [getSelectedCity(),checkedTagsArray];
+  const query = [getSelectedCity(),getCheckedTags().toString()];
   params.set("q", query);
   params.set("f", "live");
   const link = `${base}?${params.toString()}`;

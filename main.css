@@ -14,7 +14,9 @@ body{
 
 .main_card{
   width: 40% !important;
-  margin: auto !important;
+  height: 500px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .checkbox{
