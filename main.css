@@ -13,11 +13,26 @@ body{
 }
 
 .main_card{
-  width: 70vw !important;
-  height: 50vh;
+  width: 50vw !important;
   margin: auto !important;
+
+ 
 }
 
-.checkbox{
-  margin: 10px;
+.cloumn-margin{
+  margin: 0.5rem 0;
 }
+
+@media screen and (max-width:992px) {
+  .main_card{
+    width: 100% !important;
+  }
+
+  .cloumn-margin{
+    margin: 0.2 0;
+  }
+
+
+}
+
+
