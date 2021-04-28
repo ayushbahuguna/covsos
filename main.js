@@ -32,7 +32,7 @@ function generateLink(){
   const params = new URLSearchParams();
   if(getSelectedCity() != undefined && getCheckedTags().length > 0){
     const query = [getSelectedCity(),getCheckedTags().toString()];
-    params.set("q", query);
+    params.set("q", query.toString().split(",").join(" "));
   }
   
   params.set("f", "live");
