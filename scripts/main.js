@@ -24,12 +24,11 @@ function getCheckedTags(){
       appliedTags.push(checkedTag.value);
     }
   }
-  return appliedTags;
+  return appliedTags.toString();
 }
 
 function getAdditionalKeywords(){
 const additionalKeyword = document.getElementById("otherKeywords").value;
-console.log(additionalKeyword.length);
 if(additionalKeyword.length > 0){
   return additionalKeyword;
 }
@@ -38,11 +37,20 @@ if(additionalKeyword.length > 0){
 function generateLink(){
   const base = "https://twitter.com/search"
   const params = new URLSearchParams();
-  if(getSelectedCity() != undefined && getCheckedTags().length > 0){
-    const query = [getSelectedCity(),getCheckedTags().toString()];
+  const selectedCity = getSelectedCity();
+  const appliedTags = getCheckedTags();
+  const additionalTerms = getAdditionalKeywords();
+
+  let finalSearchTerms = [selectedCity, appliedTags, additionalTerms];
+  finalSearchTerms = finalSearchTerms.filter((ft) => {
+    return ft!= undefined && ft!="";
+  })
+  const query = finalSearchTerms;
+   
+  if(finalSearchTerms.length > 0){
+    const query = finalSearchTerms;
     params.set("q", query.toString().split(",").join(" "));
-    console.log(query);
-    console.log(params.get("q"));
+   
   }
   
   params.set("f", "live");
