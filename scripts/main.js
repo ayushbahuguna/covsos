@@ -27,12 +27,22 @@ function getCheckedTags(){
   return appliedTags;
 }
 
+function getAdditionalKeywords(){
+const additionalKeyword = document.getElementById("otherKeywords").value;
+console.log(additionalKeyword.length);
+if(additionalKeyword.length > 0){
+  return additionalKeyword;
+}
+}
+
 function generateLink(){
   const base = "https://twitter.com/search"
   const params = new URLSearchParams();
   if(getSelectedCity() != undefined && getCheckedTags().length > 0){
     const query = [getSelectedCity(),getCheckedTags().toString()];
     params.set("q", query.toString().split(",").join(" "));
+    console.log(query);
+    console.log(params.get("q"));
   }
   
   params.set("f", "live");
